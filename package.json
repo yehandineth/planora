@@ -1,5 +1,5 @@
 {
-  "name": "ai-life-calendar",
+  "name": "Planora",
   "version": "0.1.0",
   "description": "AI-powered calendar that helps you plan your life and build habits",
   "private": true,
@@ -12,24 +12,24 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@anthropic-ai/sdk": "^0.24.0",
+    "@anthropic-ai/sdk": "^0.24.3",
     "@clerk/nextjs": "^6.36.9",
-    "clsx": "^2.1.0",
-    "convex": "^1.10.0",
-    "date-fns": "^3.3.0",
+    "convex": "^1.31.6",
+    "next": "15.5.9",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "date-fns": "^3.6.0",
     "lucide-react": "^0.300.0",
-    "next": "^15.2.3",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "tailwind-merge": "^2.2.0"
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^2.6.0"
   },
   "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "autoprefixer": "^10.0.1",
-    "postcss": "^8",
-    "tailwindcss": "^3.3.0",
-    "typescript": "^5"
+    "@types/node": "^20.19.30",
+    "@types/react": "^18.3.27",
+    "@types/react-dom": "^18.3.7",
+    "autoprefixer": "^10.4.23",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.19",
+    "typescript": "^5.9.3"
   }
 }
