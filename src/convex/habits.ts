@@ -21,7 +21,7 @@ export const getHabits = query({
   handler: async (ctx, args) => {
     const habits = await ctx.db
       .query("habits")
-      .withIndex("by_user", (q) => q.eq("userId", args.userId))
+      .withIndex("by_user", (q : any) => q.eq("userId", args.userId))
       .collect()
     
     // Sort by creation date (newest first)
@@ -39,7 +39,7 @@ export const getActiveHabits = query({
   handler: async (ctx, args) => {
     const habits = await ctx.db
       .query("habits")
-      .withIndex("by_user", (q) => q.eq("userId", args.userId))
+      .withIndex("by_user", (q : any) => q.eq("userId", args.userId))
       .collect()
     
     // Filter to active only and sort by name
@@ -138,7 +138,7 @@ export const deleteHabit = mutation({
     // Also delete all logs for this habit
     const logs = await ctx.db
       .query("habitLogs")
-      .withIndex("by_habit_and_date", (q) => q.eq("habitId", args.habitId))
+      .withIndex("by_habit_and_date", (q : any) => q.eq("habitId", args.habitId))
       .collect()
     
     await Promise.all(logs.map((log) => ctx.db.delete(log._id)))
@@ -165,7 +165,7 @@ export const logHabitCompletion = mutation({
     // Check if there's already a log for this habit on this date
     const existingLog = await ctx.db
       .query("habitLogs")
-      .withIndex("by_habit_and_date", (q) => 
+      .withIndex("by_habit_and_date", (q : any) => 
         q.eq("habitId", args.habitId).eq("date", args.date)
       )
       .unique()
@@ -207,7 +207,7 @@ async function updateStreak(ctx: any, habitId: any) {
   // Get all logs for this habit, sorted by date descending
   const logs = await ctx.db
     .query("habitLogs")
-    .withIndex("by_habit_and_date", (q) => q.eq("habitId", habitId))
+    .withIndex("by_habit_and_date", (q : any) => q.eq("habitId", habitId))
     .collect()
   
   // Sort by date descending (most recent first)
@@ -258,7 +258,7 @@ export const getHabitLogsByDate = query({
   handler: async (ctx, args) => {
     const logs = await ctx.db
       .query("habitLogs")
-      .withIndex("by_user_and_date", (q) => 
+      .withIndex("by_user_and_date", (q : any) => 
         q.eq("userId", args.userId).eq("date", args.date)
       )
       .collect()
@@ -280,7 +280,7 @@ export const getHabitStats = query({
   handler: async (ctx, args) => {
     const logs = await ctx.db
       .query("habitLogs")
-      .withIndex("by_habit_and_date", (q) => q.eq("habitId", args.habitId))
+      .withIndex("by_habit_and_date", (q : any) => q.eq("habitId", args.habitId))
       .collect()
     
     // Filter to date range
