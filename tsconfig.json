@@ -1,0 +1,66 @@
+{
+  /*
+   * ============================================
+   * TYPESCRIPT CONFIGURATION
+   * ============================================
+   * 
+   * TypeScript is JavaScript with type hints (like Python's typing module).
+   * This file tells the TS compiler how to behave.
+   * 
+   * You probably won't need to touch this - it's auto-generated
+   * by Next.js and these are sensible defaults.
+   * ============================================
+   */
+  "compilerOptions": {
+    // Where to find type definitions
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    // Allow JavaScript files too (not just TypeScript)
+    "allowJs": true,
+    // Skip type checking of node_modules (faster builds)
+    "skipLibCheck": true,
+    // Be strict about types (catches more bugs)
+    "strict": true,
+    // Don't emit JS files (Next.js handles this)
+    "noEmit": true,
+    // Support JSX (the HTML-like syntax in React)
+    "jsx": "preserve",
+    // Modern module system
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    // Enable incremental compilation (faster rebuilds)
+    "incremental": true,
+    // Next.js specific plugin
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    // Path aliases - so you can write "@/components" instead of "../../../components"
+    // This is like setting up PYTHONPATH
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    },
+    "target": "ES2017"
+  },
+  // Which files to include
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  // Which files to exclude
+  "exclude": [
+    "node_modules"
+  ]
+}

@@ -1,0 +1,80 @@
+/**
+ * ============================================
+ * GLOBAL STYLES
+ * ============================================
+ * 
+ * This file imports Tailwind's CSS and defines any global styles.
+ * The @tailwind directives are processed by PostCSS and replaced
+ * with actual CSS.
+ * 
+ * Think of this as your main.css that applies to the whole app.
+ * ============================================
+ */
+
+/* Import Tailwind's base styles (resets, defaults) */
+@tailwind base;
+
+/* Import Tailwind's component classes */
+@tailwind components;
+
+/* Import Tailwind's utility classes (the main stuff like p-4, flex, etc.) */
+@tailwind utilities;
+
+/* 
+ * Custom global styles below
+ * These apply to the entire app
+ */
+
+/* Smooth scrolling for the whole page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Nice default body styles */
+body {
+  /* Slightly off-white background - easier on the eyes */
+  @apply bg-slate-50 text-slate-900 antialiased;
+}
+
+/* Custom scrollbar styling (optional, makes it prettier) */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-slate-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-300 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-slate-400;
+}
+
+/* 
+ * Custom utility classes using @layer
+ * These become available like any other Tailwind class
+ */
+@layer components {
+  /* Reusable card style */
+  .card {
+    @apply bg-white rounded-2xl shadow-sm border border-slate-200 p-6;
+  }
+  
+  /* Primary button style */
+  .btn-primary {
+    @apply bg-brand-500 text-white px-4 py-2 rounded-xl font-medium
+           hover:bg-brand-600 transition-colors duration-200
+           focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2;
+  }
+  
+  /* Secondary button style */
+  .btn-secondary {
+    @apply bg-slate-100 text-slate-700 px-4 py-2 rounded-xl font-medium
+           hover:bg-slate-200 transition-colors duration-200
+           focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2;
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "ai-life-calendar",
+  "version": "0.1.0",
+  "description": "AI-powered calendar that helps you plan your life and build habits",
+  "private": true,
+  "scripts": {
+    "dev": "npm run dev:next & npm run dev:convex",
+    "dev:next": "next dev",
+    "dev:convex": "convex dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.24.0",
+    "@clerk/nextjs": "^6.36.9",
+    "clsx": "^2.1.0",
+    "convex": "^1.10.0",
+    "date-fns": "^3.3.0",
+    "lucide-react": "^0.300.0",
+    "next": "^15.2.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tailwind-merge": "^2.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "autoprefixer": "^10.0.1",
+    "postcss": "^8",
+    "tailwindcss": "^3.3.0",
+    "typescript": "^5"
+  }
+}

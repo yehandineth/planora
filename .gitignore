@@ -1,0 +1,32 @@
+# ============================================
+# GIT IGNORE FILE
+# ============================================
+# This tells git which files/folders to NOT track
+# Similar to how you'd ignore __pycache__ in Python
+# ============================================
+
+# Dependencies (like your Python venv folder)
+node_modules/
+
+# Next.js build output (like Python's dist/ or build/)
+.next/
+out/
+
+# Environment files with secrets (NEVER commit these!)
+.env
+.env.local
+.env.production
+
+# Debug logs
+npm-debug.log*
+
+# IDE settings
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Convex generated files
+.convex/
