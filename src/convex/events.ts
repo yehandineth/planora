@@ -1,16 +1,4 @@
-/**
- * ============================================
- * CONVEX EVENTS FUNCTIONS - src/convex/events.ts
- * ============================================
- * 
- * Database operations for calendar events.
- * These handle creating, reading, updating, and deleting events.
- * 
- * In Python terms, this is like your events API views/handlers.
- * ============================================
- */
-
-import { query, mutation } from "./_generated/server"
+﻿import { query, mutation } from "./_generated/server"
 import { v } from "convex/values"
 
 /**

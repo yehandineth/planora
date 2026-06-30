@@ -1,17 +1,4 @@
-/**
- * ============================================
- * CALENDAR PAGE - src/app/dashboard/calendar/page.tsx
- * ============================================
- * 
- * Shows the user's calendar with all their scheduled events.
- * Displays a week view with time blocks.
- * 
- * This is simpler than a full calendar library but gives
- * you control over the design.
- * ============================================
- */
-
-"use client"
+﻿"use client"
 
 import { useState, useEffect } from 'react'
 import { useUser } from '@clerk/nextjs'
@@ -290,7 +277,7 @@ export default function CalendarPage() {
                         {event.category}
                       </span>
                       <span className="text-slate-400">
-                        {event.createdBy === 'ai' ? '🤖 AI' : '👤 You'}
+                        {event.createdBy === 'ai' ? 'ðŸ¤– AI' : 'ðŸ‘¤ You'}
                       </span>
                     </div>
                   </li>

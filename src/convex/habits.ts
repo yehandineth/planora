@@ -1,14 +1,4 @@
-/**
- * ============================================
- * CONVEX HABITS FUNCTIONS - src/convex/habits.ts
- * ============================================
- * 
- * Database operations for habits and habit tracking.
- * Handles creating habits, logging completions, and calculating streaks.
- * ============================================
- */
-
-import { query, mutation } from "./_generated/server"
+﻿import { query, mutation } from "./_generated/server"
 import { v } from "convex/values"
 
 /**

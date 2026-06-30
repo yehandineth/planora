@@ -1,16 +1,4 @@
-/**
- * ============================================
- * SETTINGS PAGE - src/app/dashboard/settings/page.tsx
- * ============================================
- * 
- * User settings page for configuring:
- * - Planning time preference
- * - Timezone
- * - Other preferences
- * ============================================
- */
-
-"use client"
+﻿"use client"
 
 import { useState, useEffect } from 'react'
 import { useUser } from '@clerk/nextjs'

@@ -1,19 +1,4 @@
-/**
- * ============================================
- * DASHBOARD LAYOUT - src/app/dashboard/layout.tsx
- * ============================================
- * 
- * This layout wraps all pages under /dashboard/*.
- * It provides:
- * - Sidebar navigation
- * - Protected route (must be logged in)
- * - Common structure for dashboard pages
- * 
- * Layout files in Next.js are like nested templates.
- * ============================================
- */
-
-// This is a client component because it uses Clerk hooks
+﻿// This is a client component because it uses Clerk hooks
 "use client"
 
 import { useUser, UserButton } from '@clerk/nextjs'

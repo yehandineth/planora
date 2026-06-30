@@ -1,25 +1,4 @@
-/**
- * ============================================
- * CONVEX CLIENT PROVIDER - src/components/ConvexClientProvider.tsx
- * ============================================
- * 
- * This component sets up the Convex database connection for the entire app.
- * 
- * WHY A SEPARATE FILE?
- * - The root layout.tsx is a Server Component (runs on server)
- * - Convex needs to run on the client (browser)
- * - So we create this Client Component wrapper
- * 
- * WHAT IS A PROVIDER?
- * Think of it like dependency injection in Python.
- * Instead of passing the database connection to every component,
- * we "provide" it at the top level and any child can access it.
- * 
- * Similar concept in Python: Flask's app context, or Django's request object
- * ============================================
- */
-
-// "use client" tells Next.js this runs in the browser
+﻿// "use client" tells Next.js this runs in the browser
 // Without this, you can't use React hooks like useState
 "use client"
 

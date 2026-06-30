@@ -1,18 +1,4 @@
-/**
- * ============================================
- * DASHBOARD HOME PAGE - src/app/dashboard/page.tsx
- * ============================================
- * 
- * The main dashboard view showing:
- * - Today's schedule overview
- * - Quick actions (plan day, view habits)
- * - Habit streak summary
- * 
- * This is a Client Component because it uses hooks.
- * ============================================
- */
-
-"use client"
+﻿"use client"
 
 import { useUser } from '@clerk/nextjs'
 import { useQuery, useMutation } from 'convex/react'
@@ -112,10 +98,10 @@ export default function DashboardPage() {
       {/* Header with greeting */}
       <header className="mb-8">
         <h1 className="text-3xl font-bold text-slate-900 mb-2">
-          {getGreeting()}, {user?.firstName || 'there'}! 👋
+          {getGreeting()}, {user?.firstName || 'there'}! ðŸ‘‹
         </h1>
         <p className="text-slate-600">
-          {todayFormatted} • Here's your day at a glance
+          {todayFormatted} â€¢ Here's your day at a glance
         </p>
       </header>
       
@@ -290,7 +276,7 @@ export default function DashboardPage() {
                       {habit.name}
                     </p>
                     <p className="text-xs text-slate-500">
-                      {habit.frequency} • {habit.durationMinutes} mins
+                      {habit.frequency} â€¢ {habit.durationMinutes} mins
                     </p>
                   </div>
                   <div className="flex items-center gap-1 text-orange-600">

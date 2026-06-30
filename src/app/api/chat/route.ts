@@ -1,10 +1,4 @@
-/**
- * ============================================
- * CLAUDE CHAT API ROUTE - src/app/api/chat/route.ts
- * ============================================
- */
-
-import Anthropic from '@anthropic-ai/sdk'
+﻿import Anthropic from '@anthropic-ai/sdk'
 import { NextRequest, NextResponse } from 'next/server'
 import { auth } from '@clerk/nextjs/server'
 

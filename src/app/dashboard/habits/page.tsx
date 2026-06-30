@@ -1,32 +1,17 @@
-/**
- * ============================================
- * HABITS PAGE - src/app/dashboard/habits/page.tsx
- * ============================================
- * 
- * Manage and track habits.
- * Users can:
- * - Add new habits
- * - View habit streaks
- * - Mark habits as complete for today
- * ============================================
- */
-
-"use client"
+﻿"use client"
 
 import { useState, useEffect } from 'react'
 import { useUser } from '@clerk/nextjs'
 import { useQuery, useMutation } from 'convex/react'
 import { api } from '@/convex/_generated/api'
 import { format } from 'date-fns'
-import { 
-  Target, 
-  Plus, 
-  Flame, 
-  Check, 
-  X,
+import {
+  Target,
+  Plus,
+  Flame,
+  Check,
   Clock,
   Trash2,
-  Edit2
 } from 'lucide-react'
 
 /**
@@ -58,9 +43,9 @@ const frequencyOptions = [
  */
 const timeOptions = [
   { value: 'morning', label: '🌅 Morning' },
-  { value: 'afternoon', label: '☀️ Afternoon' },
+  { value: 'afternoon', label: 'â˜€ï¸ Afternoon' },
   { value: 'evening', label: '🌙 Evening' },
-  { value: 'flexible', label: '🔄 Flexible' },
+  { value: 'flexible', label: 'ðŸ”„ Flexible' },
 ]
 
 export default function HabitsPage() {
@@ -408,7 +393,7 @@ export default function HabitsPage() {
                   {/* Footer */}
                   <div className="flex items-center justify-between mt-4 pt-3 border-t border-slate-100">
                     <span className="text-xs text-slate-400">
-                      {habit.frequency} • {habit.preferredTime || 'flexible'}
+                      {habit.frequency} â€¢ {habit.preferredTime || 'flexible'}
                     </span>
                     <button
                       onClick={() => handleDeleteHabit(habit._id)}

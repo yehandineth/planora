@@ -1,24 +1,4 @@
-/**
- * ============================================
- * HOME PAGE - src/app/page.tsx
- * ============================================
- * 
- * This is the landing page at the root URL (/).
- * Shows when users aren't logged in.
- * 
- * In Next.js App Router:
- * - page.tsx files define the actual page content
- * - The URL is determined by the folder structure:
- *   - src/app/page.tsx → /
- *   - src/app/dashboard/page.tsx → /dashboard
- *   - src/app/settings/page.tsx → /settings
- * 
- * This is a SERVER component (no "use client" directive)
- * which means it renders on the server = faster initial load
- * ============================================
- */
-
-// Import Link component for client-side navigation
+﻿// Import Link component for client-side navigation
 // This is like <a> but doesn't reload the whole page
 import Link from 'next/link'
 
@@ -204,7 +184,7 @@ export default function Home() {
           ============================================ */}
       <footer className="py-8 border-t border-slate-200">
         <div className="max-w-6xl mx-auto px-6 text-center text-slate-500">
-          <p>© 2024 AI Life Calendar. Built to help you thrive.</p>
+          <p>Â© 2024 AI Life Calendar. Built to help you thrive.</p>
         </div>
       </footer>
     </main>

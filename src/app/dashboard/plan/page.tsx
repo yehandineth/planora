@@ -1,23 +1,4 @@
-/**
- * ============================================
- * AI PLANNING PAGE - src/app/dashboard/plan/page.tsx
- * ============================================
- * 
- * This is the CORE FEATURE of your app!
- * 
- * Here users chat with Claude to plan their day.
- * The AI asks questions, understands their schedule,
- * and creates a plan that gets saved to the calendar.
- * 
- * KEY CONCEPTS:
- * - useState: Like a Python variable that triggers re-render when changed
- * - useEffect: Code that runs after render (like componentDidMount)
- * - useRef: A mutable reference that persists across renders
- * - fetch: Built-in function to make HTTP requests (like requests.get in Python)
- * ============================================
- */
-
-"use client"
+﻿"use client"
 
 import { useState, useRef, useEffect } from 'react'
 import { useUser } from '@clerk/nextjs'
@@ -132,7 +113,7 @@ export default function PlanPage() {
       // Add initial AI message
       setMessages([{
         role: 'assistant',
-        content: `Hi! 👋 I'm here to help you plan your day for **${tomorrowFormatted}**.\n\nLet's make tomorrow great! First, tell me - do you have work or school tomorrow? If so, what time do you need to start and finish?`
+        content: `Hi! ðŸ‘‹ I'm here to help you plan your day for **${tomorrowFormatted}**.\n\nLet's make tomorrow great! First, tell me - do you have work or school tomorrow? If so, what time do you need to start and finish?`
       }])
     }
   }, [tomorrowFormatted, messages.length])
@@ -263,7 +244,7 @@ export default function PlanPage() {
         ...prev,
         {
           role: 'assistant',
-          content: `✅ **Your schedule for ${tomorrowFormatted} is saved!**\n\nYou can view it in your calendar. Have a productive day tomorrow! 🚀`
+          content: `âœ… **Your schedule for ${tomorrowFormatted} is saved!**\n\nYou can view it in your calendar. Have a productive day tomorrow! ðŸš€`
         }
       ])
       
@@ -287,7 +268,7 @@ export default function PlanPage() {
   function handleStartOver() {
     setMessages([{
       role: 'assistant',
-      content: `Let's start fresh! 🔄\n\nWhat would you like to plan for **${tomorrowFormatted}**? Do you have work tomorrow?`
+      content: `Let's start fresh! ðŸ”„\n\nWhat would you like to plan for **${tomorrowFormatted}**? Do you have work tomorrow?`
     }])
     setParsedSchedule(null)
     setScheduleConfirmed(false)

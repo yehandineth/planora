@@ -1,22 +1,4 @@
-/**
- * ============================================
- * CONVEX USER FUNCTIONS - src/convex/users.ts
- * ============================================
- * 
- * This file contains all database operations related to users.
- * Think of these as your API endpoints or Django views for user data.
- * 
- * CONVEX FUNCTION TYPES:
- * - query = Read data (like GET request, SELECT in SQL)
- * - mutation = Write data (like POST/PUT/DELETE, INSERT/UPDATE in SQL)
- * - action = Can call external APIs, more complex logic
- * 
- * These functions run on Convex's servers, not in the browser.
- * The browser calls them via hooks like useQuery() and useMutation().
- * ============================================
- */
-
-// Import Convex function builders
+﻿// Import Convex function builders
 import { query, mutation } from "./_generated/server"
 import { v } from "convex/values"
 

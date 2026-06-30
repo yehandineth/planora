@@ -1,31 +1,4 @@
-/**
- * ============================================
- * CONVEX SCHEMA - src/convex/schema.ts
- * ============================================
- * 
- * This defines your database structure (like models.py in Django).
- * Convex uses this to:
- * - Validate data before inserting
- * - Provide TypeScript types automatically
- * - Create indexes for fast queries
- * 
- * KEY DIFFERENCES FROM SQL:
- * - No migrations needed - Convex handles schema changes
- * - Document-based (like MongoDB) not relational
- * - Automatic TypeScript types from schema
- * 
- * CONVEX TYPES:
- * - v.string() = text
- * - v.number() = integer or float
- * - v.boolean() = true/false
- * - v.array() = list
- * - v.object() = nested object/dict
- * - v.optional() = field can be missing (like None in Python)
- * - v.id("tableName") = reference to another document (like ForeignKey)
- * ============================================
- */
-
-// Import Convex's schema definition helpers
+﻿// Import Convex's schema definition helpers
 import { defineSchema, defineTable } from "convex/server"
 import { v } from "convex/values"  // v = validators (like Pydantic in Python)
 
